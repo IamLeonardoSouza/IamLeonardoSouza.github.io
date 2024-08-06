@@ -166,7 +166,5 @@ tests/
 data/
 *.txt
 logs/
-images/
-*.png
 
 !requirements.txt
