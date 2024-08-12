@@ -505,3 +505,13 @@ footer .line-footer p a {
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 20px;
 }
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    margin: 40px 0;
+    text-align: justify;
+}
+
+p{
+    text-align: justify;
+}
