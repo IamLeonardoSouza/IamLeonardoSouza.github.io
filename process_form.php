@@ -1,25 +1,24 @@
 <?php
-    // Coleta e validação dos dados
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $message = htmlspecialchars($_POST['message']);
 
-    // Configuração do e-mail
-    $to = "leonardofs1910@gmail.com";
-    $subject = "Novo Formulário de Contato";
-    $headers = "From: $email";
+    // Captura dos valores enviados pelo formulário
+    $nome = addslashes($_POST['name']);
+    $email = addslashes($_POST['email']);
+    $telefone = addslashes($_POST['phone']);
+    $mensagem = addslashes($_POST['message']);
 
-    // Montagem da mensagem
-    $email_body = "Nome: $name\n";
-    $email_body .= "E-mail: $email\n";
-    $email_body .= "Telefone: $phone\n";
-    $email_body .= "Mensagem:\n$message\n";
+    // Configurações do e-mail
+    $para = "leonardofs1910@gmail.com";
+    $assunto = "Nova Mensagem!";
+
+    $corpo = "Nome: ".$nome."\n"."E-mail: ".$email."\n"."Telefone: ".$telefone."\n"."Mensagem: ".$mensagem;
+
+    $cabeca = "From: leonardofs1910@gmail.com"."\n"."Reply-to: ".$email."\n"."X-Mailer: PHP/".phpversion();
 
     // Envio do e-mail
-    if (mail($to, $subject, $email_body, $headers)) {
-        echo "Mensagem enviada com sucesso!";
-    } else {
-        echo "Falha no envio da mensagem.";
-    } 
+    if(mail($para,$assunto,$corpo,$cabeca)){
+        echo("E-mail enviado com sucesso!");
+    }else{
+        echo("Houve um erro ao enviar o e-mail!");
+    }
+
 ?>
