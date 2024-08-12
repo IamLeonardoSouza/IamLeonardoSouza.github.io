@@ -48,7 +48,7 @@ h2.titulo span{
     color: #0267e3;
 }
 
-button:hover{
+button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #0267e3e5;
     transform: scale(1.05);
 }
@@ -227,5 +227,51 @@ section.sobre .flex{
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
+    transition: .2s;
+}
+
+/* Estilo de formulário */
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 800px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #0267e3;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
     transition: .2s;
 }
