@@ -38,6 +38,21 @@ body{
     transition: .2s;
 }
 
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #0267e3;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #0267e3e5;
+    transform: scale(1.05);
+}
+
 /* Estilo do Cabeçalho */
 
 header{
@@ -68,11 +83,6 @@ header nav ul li{
 
 header a:hover{
     color: #fff;
-    transform: scale(1.05);
-}
-
-.btn-contato button:hover{
-    box-shadow: 0px 0px 8px #0267e3e5;
     transform: scale(1.05);
 }
 
@@ -122,4 +132,100 @@ section.topo-do-dite .flex{
     100%{
         top: 30px;
     }
+}
+
+/* Estilo das Especialidades */
+
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 14px #ffffff78;
+}
+
+.logo-python img {
+    width: 100px;
+    height: 90px;
+    object-fit: contain; /* Mantém a proporção sem cortar o conteúdo */
+}
+
+.logo-java img {
+    width: 100px;
+    height: 90px;
+    object-fit: contain; /* Mantém a proporção sem cortar o conteúdo */
+}
+
+.logo-docker img {
+    width: 100px;
+    height: 90px;
+    object-fit: contain; /* Mantém a proporção sem cortar o conteúdo */
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.img-sobre img {
+    width: 350px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+
+    border-radius: 20px;
+}
+
+/* Estilo do Sobre */
+
+section.sobre{
+    padding: 70px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+    text-align: justify;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #0267e3;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0267e3;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
 }
